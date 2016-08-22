@@ -31,14 +31,15 @@ maven을 사용하지 않고 하는 경우에는 직접 라이브러리 파일�
 그 다음 남은 것은 Spring Framework 추가, web.xml, servlet-context, application-context(root-context)를 생성해주고 view(jsp파일)와 Controller 자바 파일을 생성해주기가 남았다.
 
 - 먼저 Spring Framework를 추가해보자. 
-<a href="http://maven.springframework.org/release/org/springframework/spring/">http://maven.springframework.org/release/org/springframework/spring/</a> 왼쪽의 링크에서 원하는 스프링 프레임워크 버전을 선택해서 라이브러리 파일을 다운로드 받는다.(최신버전일 경우 현재 자신의 컴퓨터에 깔린 JAVA버전을 확인해봐야 한다.) 
+<a href="http://maven.springframework.org/release/org/springframework/spring/">http://maven.springframework.org/release/org/springframework/spring/</a> 왼쪽의 링크에서 원하는 스프링 프레임워크 버전을 선택해서 라이브러리 파일을 다운로드 받는다.(최신버전일 경우 현재 자신의 컴퓨터에 깔린 JAVA버전을 확인해봐야 한다.) 다운 받은 후 아래 경로와 같은 곳에 받은 라이브러리 파일을 추가한다. 또한 추가로 commons-logging.jar 파일을 받아서 넣어줘야 한다. commons-logging.jar 가 없을 경우 tomcat 에러가 난다.
+
 <figure>
    <img src="/media/img/spring lib.png" />
    <figcaption>SpringFramework를 프로젝트에 추가</figcaption>
 </figure>
 
 - 위 그림과 같이 Spring Framework 라이브러리를 추가하고, 다음으로 web.xml을 만들어 준다. WebContent -> WEB-INF 폴더 안에 만들어 준다.
-web.xml을 추가하고 나서 아래 코드를 복사 붙여넣기 해서 넣어준다. 추가로 commons-logging.jar 파일을 받아서 넣어줘야 한다. commons-logging.jar 가 없을 경우 tomcat 에러가 난다.
+web.xml을 추가하고 나서 아래 코드를 복사 붙여넣기 해서 넣어준다.
 <figure>
 
 {% highlight xml %}

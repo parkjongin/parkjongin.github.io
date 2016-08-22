@@ -1,6 +1,6 @@
 ---
 layout:            post
-title:             "스프링 설정 및 스프링 프로젝트 맛보기(maven 없이)"
+title:             "스프링 설정 및 스프링 프로젝트 간보기(maven 없이)"
 category:          Spring
 author:            pji
 tags:              Spring, Servlet Context, Root Context, Web.xml, Spring Configuration

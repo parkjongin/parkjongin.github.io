@@ -38,7 +38,7 @@ maven을 사용하지 않고 하는 경우에는 직접 라이브러리 파일�
 </figure>
 
 - 위 그림과 같이 Spring Framework 라이브러리를 추가하고, 다음으로 web.xml을 만들어 준다. WebContent -> WEB-INF 폴더 안에 만들어 준다.
-web.xml을 추가하고 나서 아래 코드를 복사 붙여넣기 해서 넣어준다.
+web.xml을 추가하고 나서 아래 코드를 복사 붙여넣기 해서 넣어준다. 추가로 commons-logging.jar 파일을 받아서 넣어줘야 한다. commons-logging.jar 가 없을 경우 tomcat 에러가 난다.
 <figure>
 
 {% highlight xml %}
@@ -227,6 +227,9 @@ ${helloWorld}
 {% endhighlight %}
    <figcaption>helloSpring.jsp</figcaption>
 </figure>
+
+- 
+
 
 
 - 마지막으로 컨트롤러를 추가할 차례다. 

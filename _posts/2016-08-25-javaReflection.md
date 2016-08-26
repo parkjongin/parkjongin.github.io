@@ -1,7 +1,7 @@
 ---
 layout:            post
 title:             "JAVA Reflection"
-category:          Spring, JAVA
+category:          JAVA
 author:            pji
 tags:              Reflection JAVARecflection
 ---

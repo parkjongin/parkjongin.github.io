@@ -1,9 +1,9 @@
 ---
 layout:            post
-title:             "JAVA Reflection과 Spring"
+title:             "JAVA Reflection"
 category:          Spring, JAVA
 author:            pji
-tags:              Reflection SpringReflection JAVARecflection
+tags:              Reflection JAVARecflection
 ---
 
 
@@ -15,7 +15,8 @@ tags:              Reflection SpringReflection JAVARecflection
  reflection기술은 보통 라이브러리를 만들 때 사용할 수 있다. 예를 들면 자료형에 상관없이 json객체로 만들어주는 기능이 필요하다고 생각해보자.
  자료형에는 우리가 모델로 정의한 클래스가 있을 수도 있고 형태가 다양할 것이다. 이럴경우 자바 리플렉션을 이용해서 json객체로 만들어줄 수 있다.
 
- ## JAVA Reflection을 이용한 JSON객체 생성
+## JAVA Reflection을 이용한 JSON객체 생성
+
 <figure>
 {% highlight JAVA %}
 

@@ -153,6 +153,7 @@ servlet-context와 root-context을 xml로 작성할 것이다.
 
 viewResolver 설정에서 &lt;property name="prefix" value="/WEB-INF/viewFolder/" /&gt;  는 앞 경로를 의미한다. 디스패쳐 서블릿이 컨트롤러로 부터 결과값을 받아서 viewResolver로 연결해 줄 때 /WEB-INF/veiwFolder/로 경로가 이동되고 &lt;property name="suffix" value=".jsp" /&gt;  를 통해 확장자가 .jsp로 끝나는 뷰 파일을 호출할 것이라고 property설정을 해주는 것이다. 위에서 viewFolder와 .jsp는 자신이 원하는 것으로 해도 된다. 
 위 예제 에서는 jstlView를 사용했으므로 추가로 <a href = "http://central.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar">jstl.jar(누르면 다운로드 됩니다.)</a>를 받아서 lib폴더에 넣어줘야 한다.
+또한 &lt;context:component-scan base-package="com.test" /&gt;	에서 base-package 경로를 자신의 프로젝트 패키지에서 controller.java파일이 있는 패키지 경로로 입력해주면 된다. 만약 component-scan을 사용하지 않을 경우 따로 bean을 등록해주고 DI를 해줘야 한다. 그렇지 않고 @autowired를 사용할 것이라면 &lt;context:component-scan base-package="com.test" /&gt;에서 경로를 알맞게 바꿔주자. 현재 예제에서는 component-scan을 사용했다.
 
 
 <figure>
@@ -229,9 +230,6 @@ ${helloWorld}
 {% endhighlight %}
    <figcaption>helloSpring.jsp</figcaption>
 </figure>
-
-- 
-
 
 
 - 마지막으로 컨트롤러를 추가할 차례다. 

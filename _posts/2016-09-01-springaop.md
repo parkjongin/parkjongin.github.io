@@ -67,3 +67,8 @@ public class ChronometryImpl implements Chronometry{
 그리고 나서 @Pointcut은 어느 조인트 포인트를 사용할 것인가를 정의합니다.(복수 가능) 위 코드에서 조인트 포인트는 @annotation(org.springframework.transaction.annotation.Transactional) 이것이 됩니다. start()는 @Pointcut("@annotation(org.springframework.transaction.annotation.Transactional)")를 재정의한 것입니다. 
 advise는 각 조인트포인트에 삽입되어져 동작할 코드들을 나타냅니다.
 위 코드에서 보면 @Before("@annotation(org.springframework.transaction.annotation.Transactional)")와 @After("start()")가 있는 것을 확인할 수 있습니다. @Before는 "@annotation(org.springframework.transaction.annotation.Transactional)" 이거 자체가 PointCut이 되어서 따로 PointCut을 정의할 필요가 없습니다. @After는 @Pointcut("@annotation(org.springframework.transaction.annotation.Transactional)")으로 재정의된 start()를 사용하므로 따로 Pointcut을 정의해줘야 합니다.
+
+<figure>
+   <img src="/media/img/springaop.png" />
+   <figcaption>Spring AOP</figcaption>
+</figure>

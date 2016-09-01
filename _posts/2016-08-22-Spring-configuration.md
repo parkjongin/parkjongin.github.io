@@ -31,7 +31,7 @@ maven을 사용하지 않고 하는 경우에는 직접 라이브러리 파일�
 그 다음 남은 것은 Spring Framework 추가, web.xml, servlet-context, application-context(root-context)를 생성해주고 view(jsp파일)와 Controller 자바 파일을 생성해주기가 남았다.
 
 - 먼저 Spring Framework를 추가해보자. 
-<a href="http://maven.springframework.org/release/org/springframework/spring/">http://maven.springframework.org/release/org/springframework/spring/</a> 왼쪽의 링크에서 원하는 스프링 프레임워크 버전을 선택해서 라이브러리 파일을 다운로드 받는다.(최신버전일 경우 현재 자신의 컴퓨터에 깔린 JAVA버전을 확인해봐야 한다.) 다운 받은 후 아래 경로와 같은 곳에 받은 라이브러리 파일을 추가한다. 또한 추가로 commons-logging.jar 파일을 받아서 넣어줘야 한다. commons-logging.jar 가 없을 경우 tomcat 에러가 난다.
+<a href="http://maven.springframework.org/release/org/springframework/spring/">http://maven.springframework.org/release/org/springframework/spring/</a> 왼쪽의 링크에서 원하는 스프링 프레임워크 버전을 선택해서 라이브러리 파일을 다운로드 받는다.(최신버전일 경우 현재 자신의 컴퓨터에 깔린 JAVA버전을 확인해봐야 한다.) 다운 받은 후 아래 경로와 같은 곳에 받은 라이브러리 파일을 추가한다. 또한 추가로 <a href="http://apache.tt.co.kr//commons/logging/binaries/commons-logging-1.2-bin.zip">commons-logging.jar(누르면 다운로드 됩니다.)</a> 파일을 받아서 넣어줘야 한다. commons-logging.jar 가 없을 경우 tomcat 에러가 난다.
 
 <figure>
    <img src="/media/img/spring lib.png" />
@@ -151,7 +151,8 @@ servlet-context와 root-context을 xml로 작성할 것이다.
    <figcaption>servlet-context.xml</figcaption>
 </figure>
 
-viewResolver 설정에서 &lt;property name="prefix" value="/WEB-INF/viewFolder/" /&gt;  는 앞 경로를 의미한다. 디스패쳐 서블릿이 컨트롤러로 부터 결과값을 받아서 viewResolver로 연결해 줄 때 /WEB-INF/veiwFolder/로 경로가 이동되고 &lt;property name="suffix" value=".jsp" /&gt;  를 통해 확장자가 .jsp로 끝나는 뷰 파일을 호출할 것이라고 property설정을 해주는 것이다. 위에서 viewFolder와 .jsp는 자신이 원하는 것으로 해도 된다.
+viewResolver 설정에서 &lt;property name="prefix" value="/WEB-INF/viewFolder/" /&gt;  는 앞 경로를 의미한다. 디스패쳐 서블릿이 컨트롤러로 부터 결과값을 받아서 viewResolver로 연결해 줄 때 /WEB-INF/veiwFolder/로 경로가 이동되고 &lt;property name="suffix" value=".jsp" /&gt;  를 통해 확장자가 .jsp로 끝나는 뷰 파일을 호출할 것이라고 property설정을 해주는 것이다. 위에서 viewFolder와 .jsp는 자신이 원하는 것으로 해도 된다. 
+위 예제 에서는 jstlView를 사용했으므로 추가로 <a href = "http://central.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar">jstl.jar(누르면 다운로드 됩니다.)</a>를 받아서 lib폴더에 넣어줘야 한다.
 
 
 <figure>

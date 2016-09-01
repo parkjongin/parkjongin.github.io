@@ -22,3 +22,9 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 ---
 
+## E-Mail
+
+pjin527@gmail.com
+
+---
+
